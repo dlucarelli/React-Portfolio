@@ -3,7 +3,10 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import Project from "./Components/Project/Project";
+import Contact from "./Components/Contact/Contact";
+import Portfolio from "./Components/Portfolio/Portfolio";
+import About from "./Components/About/About";
+
 
 
 function App() {
@@ -12,7 +15,9 @@ function App() {
     <div className="App">
       <Header />
         <Switch>
-          <Route exact path="/" component={Project} />
+          <Route exact path={["/", "/about"]} component={About} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       <Footer />
     </div>
